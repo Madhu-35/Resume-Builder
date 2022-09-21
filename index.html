@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Resume Builder</title>
+</head>
+<body>
+
+    <div class="container" id="cv-form">
+
+        <h1 class="text-center my-2">Resume Builder</h1>
+        <p class="text-center">By Learn code with Durgesh</p>
+
+        <div class="row">
+
+            <div class="col-md-6">
+                <h3>Personal Information</h3>
+
+                <div class="form-gorup mt-2">
+                    <label for="nameField">Your Name</label>
+                    <input 
+                        type="text" 
+                        id="nameField"
+                        placeholder="Enter your name"
+                        class="form-control">
+                </div>
+
+
+                <div class="form-gorup mt-2">
+                    <label for="contactField">Your Contact</label>
+                    <input 
+                        type="text" 
+                        id="contactField"
+                        placeholder="Enter your number"
+                        class="form-control">
+                </div>
+
+                <div class="form-gorup mt-2">
+                    <label for="addressField">Your Address</label>
+                    <textarea 
+                        type="text" 
+                        row="3"
+                        id="addressField"
+                        placeholder="Enter your address"
+                        class="form-control"></textarea>
+                </div>
+
+                <p class="text-secodary">Important Links</p>
+
+                <div class="form-gorup mt-2">
+                    <label for="gmField">G-mail</label>
+                    <input 
+                        type="text" 
+                        row="3"
+                        id="gmField"
+                        placeholder="Enter here"
+                        class="form-control">
+                </div>
+
+                <div class="form-gorup mt-2">
+                    <label for="ghField">Github</label>
+                    <input 
+                        type="text" 
+                        row="3"
+                        id="ghField"
+                        placeholder="Enter here"
+                        class="form-control">
+                </div>
+
+                <div class="form-gorup mt-2">
+                    <label for="liField">LinkedIn</label>
+                    <input 
+                        type="text" 
+                        row="3"
+                        id="liField"
+                        placeholder="Enter here"
+                        class="form-control">
+                </div>
+
+            </div>
+
+            <div class="col-md-6">
+                <h3>Profession Information</h3>
+
+                <div class="form-gorup mt-2">
+                    <label for="obj">Objective</label>
+                    <textarea
+                        id="objectiveField" 
+                        row="5"
+                        placeholder="Enter here"
+                        class="form-control"></textarea>
+                </div>
+
+                <div class="form-gorup mt-2" id="we">
+                    <label for="">Work Experience</label>
+                    <textarea 
+                        row="5"
+                        placeholder="Enter here"
+                        class="form-control weField"></textarea>
+
+                        <div class="container text-center mt-2" id="weAddButton">
+                            <button onclick="addNewWEField()" class="btn btn-primary btn-sm">Add</button>
+                        </div>
+                </div>
+
+                <div class="form-gorup mt-2" id="aq">
+                    <label for="">Academic Qualification</label>
+                    <textarea
+                        row="5" 
+                        placeholder="Enter here"
+                        class="form-control aqField"></textarea>
+
+                        <div class="container text-center mt-2"           
+                            id="aqAddButton">
+                            <button onclick="addNewAQField()" class="btn btn-primary btn-sm">Add</button>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container text-center mt-3" id >
+            <button onclick="generateCV()" class="btn btn-primary btn-lg">Generate CV</button>
+        </div>
+
+    </div>
+
+    <div class="container" id="cv-template">
+
+        <div class="row">
+
+            <div class="col-md-4 text-center background">
+
+                <img src="https://campussafetyconference.com/wp-content/uploads/et_temp/iStock-476085198-113597_1080x675.jpg"
+                     alt=""
+                     class="img-fluid myimg text-center">
+
+                <div class="container text-center py-5 background">
+
+                     <p id="nameT1">Madhura Patil</p>
+                     <p id="contactT">+9123456789</p>
+                     <p id="addressT">A/p: Kini</p>
+
+                     <hr />
+
+                     <p>
+                        <a id="gmT" href="#1">madhuraapatil35@gmail.com</a>
+                    </p>
+
+                    <p>
+                        <a id="ghT" href="#2">https://github.com/Madhu-35</a>
+                    </p>
+
+                    <p>
+                        <a id="liT" href="#3">https://www.linkedin.com/in/madhura-patil-767290216/</a>
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-8 py-5">
+
+                <h1 id="nameT2" class="text-center" style="font-weight:980">
+                    Madhura Patil
+                </h1>
+
+                <div class="card my-4">
+                    <div class="card-header background">
+                        
+                        <h3>Objective</h3>
+
+                    </div>
+
+                    <div class="card-body">
+                        <p id="objectiveT">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae facilis deserunt, distinctio, sapiente dolor veritatis molestiae, voluptates cupiditate repellendus nostrum placeat saepe nulla consectetur odit minima necessitatibus explicabo neque. Earum, repellendus assumenda sit provident esse quibusdam quisquam. Sequi autem animi cum alias? Corrupti, hic eaque! Adipisci atque architecto inventore optio!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card my-4">
+                    <div class="card-header background">
+                        
+                        <h3>Work Experience</h3>
+
+                    </div>
+
+                    <div class="card-body">
+                       <ul id="weT">
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, accusantium!
+                        </li>
+
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, accusantium!
+                        </li>
+
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, accusantium!
+                        </li>
+                       </ul>
+                    </div>
+                </div>
+
+                <div class="card my-4">
+                    <div class="card-header background">
+                        
+                        <h3>Academic Qualification</h3>
+
+                    </div>
+
+                    <div class="card-body">
+                       <ul id="aqT">
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, accusantium!
+                        </li>
+
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, accusantium!
+                        </li>
+
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, accusantium!
+                        </li>
+                       </ul>
+                    </div>
+                </div>
+
+                <div class="container mt-3 text-center">
+                    <button onlick="printCV()" class="btn background">
+                        Print CV
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
